@@ -1,0 +1,15 @@
+{
+    "name": "facebook-twitter-connect",
+    "description": "Login social APIS as an app",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+       "express": "3.x",
+       "oauth": "0.9.x",
+       "async": "0.2.x"
+    },
+    "engines":{
+	     "node":"0.8.x",
+	     "npm":"1.1.x"
+    }
+}
