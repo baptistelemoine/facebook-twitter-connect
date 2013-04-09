@@ -40,6 +40,8 @@ exports.feed = function (req, res){
       },
       function (data, callback){
         //get url parameters : user, type, limit, offset
+        //you can implement any of graph api parameter, just add those
+        //in the query obj
         var user = req.params.user;
         var type = req.params.type;        
         var params = url.parse(req.url, true).query;

@@ -36,7 +36,7 @@ exports.timeline = function (req, res){
 
   oa.get(uri, token, tokenSecret, function (error, data, response) {
         if (error) {
-          res.send("Error getting twitter timeline for screen name : fnsea ", 500);
+          res.send("Error getting twitter timeline for screen name" + user, 500);
         } else {
           // console.log(data);
           res.json(JSON.parse(data));
@@ -48,7 +48,7 @@ exports.searchTwitter = function (req, res){
   var term = req.params.term;
   oa.get('https://api.twitter.com/1.1/search/tweets.json?q='+encodeURIComponent(term), token, tokenSecret, function (error, data, response) {
         if (error) {
-          res.send("Error getting twitter timeline for screen name : ", 500);
+          res.send("Error getting search for " + term, 500);
         } else {
           //console.log(data);
           res.json(JSON.parse(data));
